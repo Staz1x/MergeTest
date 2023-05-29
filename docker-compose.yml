@@ -1,0 +1,29 @@
+version: "3"
+services:
+
+  #purchase
+  purchases_container:
+    container_name: purchases_container
+    ports:
+      - "80:3306"
+    environment:
+      MYSQL_USER: springuser
+      MYSQL_DATABASE: purchases_db
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: yes
+      restart: always
+
+  purchase-service:
+    # build: .
+    image: mysql:latest #länk till github image (gcr.io/username/order)
+    ports:
+      - "8001:8080"
+    environment:
+      MYSQL_HOST: purchases_container
+      DB_USER: springuser
+      DB_PASSWORD: ${DB_PASSWORD}
+      MYSQL_PORT: 3306
+      MYSQL_DB: purchases_db
+      depends_on:
+        - purchases_container
+      restart: always
