@@ -1,0 +1,18 @@
+version: "3"
+services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      - MYSQL_DATABASE=item_db
+      - MYSQL_USER=item_user
+      - MYSQL_PASSWORD=item_password
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - '33063:3306'
+    expose:
+      - '3306'
+    volumes:
+      - my-db:/var/lib/mysql
+volumes:
+  my-db:
