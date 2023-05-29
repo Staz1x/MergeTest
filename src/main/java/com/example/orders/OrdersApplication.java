@@ -17,7 +17,7 @@ public class OrdersApplication {
         SpringApplication.run(OrdersApplication.class, args);
     }
 
-    @Bean
+   /* @Bean
     public CommandLineRunner pojo(PurchaseRepo purchaseRepo){
         return args ->{
 
@@ -27,7 +27,7 @@ public class OrdersApplication {
 
             purchaseRepo.save(p1);
         };
-    }
+    }*/
 
 
     @Bean
