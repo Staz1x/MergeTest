@@ -43,7 +43,7 @@ public class PurchaseController {
     // http://localhost:8080/orders/{customerId}
     // Denna returnerar alla köp för en kund baserat på kundens id
     public List<Purchases> getCustomersOrders(long id){
-        return purchaseRepo.findAllByCustomersId(id);
+        return purchaseRepo.findAllByCustomerId(id);
     }
 
     @RequestMapping("purchase/{customerId}")
