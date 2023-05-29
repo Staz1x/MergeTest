@@ -1,10 +1,5 @@
 package com.example.orders;
 
-import com.example.orders.Model.Customers;
-import com.example.orders.Model.Items;
-import com.example.orders.Model.Purchases;
-import com.example.orders.Repository.PurchaseRepo;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -30,10 +25,10 @@ public class OrdersApplication {
     }*/
 
 
-    @Bean
+   /* @Bean
     RestTemplate restTemplate() {
         RestTemplate restTemplate = new RestTemplate();
         return restTemplate;
-    }
+    }*/
 
 }

@@ -18,8 +18,8 @@ public class PurchaseController {
 
     private static final Logger log = LoggerFactory.getLogger(PurchaseController.class);
 
-    @Autowired
-    private RestTemplate restTemplate;
+    //@Autowired
+    //private RestTemplate restTemplate;
 
     public PurchaseController(PurchaseRepo purchaseRepo){
         this.purchaseRepo = purchaseRepo;
