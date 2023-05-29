@@ -13,7 +13,7 @@ services:
       MYSQL_ROOT_PASSWORD: yes
       restart: always
 
-  purchase-service: #Item-service
+  items-service: #Item-service
     # build: .
     image: mysql:latest #länk till github image (gcr.io/username/order)
     ports:
@@ -24,6 +24,5 @@ services:
       DB_PASSWORD: ${DB_PASSWORD}
       MYSQL_PORT: 3306
       MYSQL_DB: items_db
-      depends_on:
-        - items_container
+      #depends_on:
       restart: always
