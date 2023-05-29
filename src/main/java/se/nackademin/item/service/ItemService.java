@@ -17,5 +17,7 @@ public class ItemService {
         return repository.findAll();
     }
 
-
+    public Item getItemById(Long id) {
+        return repository.findById(id).get();
+    }
 }
