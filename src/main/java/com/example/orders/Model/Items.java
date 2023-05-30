@@ -17,4 +17,11 @@ public class Items {
     private String name;
     private double price;
     private int balance;
+
+
+    public Items(String name, double price, int balance) {
+        this.name = name;
+        this.price = price;
+        this.balance = balance;
+    }
 }

@@ -23,6 +23,6 @@ public class Purchases {
     private String date;
     private Long customerId;
 
-    @ElementCollection
-    private List <Long> Items;
+    //@ElementCollection
+    //private List <Long> Items;
 }
